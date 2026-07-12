@@ -1,0 +1,91 @@
+# Visual Studio and related files
+.vs/
+.vscode/
+*.user
+*.suo
+*.sln.docstates
+*.sln.iml
+*.resharper
+.resharper*
+*.ReSharper*
+
+# Build results
+[Dd]ebug/
+[Dd]ebugPublic/
+[Rr]elease/
+[Rr]eleases/
+x64/
+x86/
+[Ww][Ii][Nn]32/
+[Aa][Rr][Mm]/
+[Aa][Rr][Mm]64/
+bld/
+[Bb]in/
+[Oo]bj/
+[Ll]og/
+[Ll]ogs/
+
+# NuGet
+*.nupkg
+*.snupkg
+.nuget/
+packages/
+.nuget/packages/
+*.nuget.props
+*.nuget.targets
+
+# Entity Framework
+Migrations/
+*.db
+*.db-shm
+*.db-wal
+
+# SQLite
+*.sqlite
+*.sqlite3
+data/
+
+# OS files
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+*~
+
+# IDE
+.idea/
+.vscode/
+*.code-workspace
+
+# Environment files
+.env
+.env.local
+.env.*.local
+appsettings.local.json
+appsettings.Development.json
+
+# Docker compose override
+docker-compose.override.yml
+
+# Temporary files
+*.tmp
+*.temp
+*~
+
+# Test Results
+TestResults/
+.coverage
+coverage.opencover.xml
+
+# Rider
+.idea/
+
+# Local history for Visual Studio Code
+.history/
+
+# Azure Files
+azure-pipelines.yml
+#
+publish-web-test/
+publish-api/
+publish-web/

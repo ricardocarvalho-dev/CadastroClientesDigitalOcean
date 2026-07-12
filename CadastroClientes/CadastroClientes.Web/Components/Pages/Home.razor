@@ -1,0 +1,90 @@
+@page "/"
+@attribute [Authorize]
+@rendermode InteractiveServer
+
+<PageTitle>Ricardodev Solução WEB</PageTitle>
+
+<div class="home-wrapper">
+    <main class="home-main">
+
+        <div class="home-header">
+            <h1 class="home-title">Bem-vindo ao sistema</h1>
+            <p class="home-subtitle">Selecione uma opção para começar</p>
+        </div>
+
+        <div class="home-grid">
+
+            <a href="/cadastro-cliente" class="home-card">
+                <div class="home-card-icon">👤</div>
+                <div class="home-card-content">
+                    <h2 class="home-card-title">Cadastro de Clientes</h2>
+                    <p class="home-card-desc">Demonstração do cadastro de clientes. Tecnologia empregada: Blazor Server, .Net 8 e SQL Server.</p>
+                </div>
+                <span class="home-card-arrow">→</span>
+            </a>
+
+            <a href="/mensageria" class="home-card">
+                <div class="home-card-icon">📨</div>
+                <div class="home-card-content">
+                    <h2 class="home-card-title">Mensageria</h2>
+                    <p class="home-card-desc">Histórico de envios de Email (Resend) e SMS (Twilio) disparados no cadastro de clientes via fila RabbitMQ.</p>
+                </div>
+                <span class="home-card-arrow">→</span>
+            </a>
+
+            <a href="/sobre-o-projeto" class="home-card">
+                <div class="home-card-icon">🏗️</div>
+                <div class="home-card-content">
+                    <h2 class="home-card-title">Arquitetura & Tecnologias</h2>
+                    <p class="home-card-desc">Stack completa, banco de dados e o fluxo de cadastro de clientes com mensageria, explicados passo a passo.</p>
+                </div>
+                <span class="home-card-arrow">→</span>
+            </a>
+
+            <div class="home-card home-card-disabled">
+                <div class="home-card-icon">📊</div>
+                <div class="home-card-content">
+                    <h2 class="home-card-title">Relatórios</h2>
+                    <p class="home-card-desc">Em breve...</p>
+                </div>
+                <span class="home-card-badge">Em breve</span>
+            </div>
+
+            <div class="home-card home-card-disabled">
+                <div class="home-card-icon">⚙️</div>
+                <div class="home-card-content">
+                    <h2 class="home-card-title">Configurações</h2>
+                    <p class="home-card-desc">Em breve...</p>
+                </div>
+                <span class="home-card-badge">Em breve</span>
+            </div>
+
+        </div>
+    </main>
+</div>
+
+<style>
+    .home-wrapper { min-height: 100vh; background: #f0f2f5; font-family: 'Segoe UI', system-ui, sans-serif; }
+    .home-main { max-width: 900px; margin: 0 auto; padding: 3rem 2rem; }
+
+    .home-header { margin-bottom: 2.5rem; }
+    .home-title { font-size: 1.75rem; font-weight: 800; color: #111827; margin: 0 0 .4rem; }
+    .home-subtitle { font-size: 1rem; color: #6b7280; margin: 0; }
+
+    .home-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 1.25rem; }
+
+    .home-card { background: #fff; border-radius: 14px; box-shadow: 0 1px 3px rgba(0,0,0,.08), 0 4px 16px rgba(0,0,0,.06); padding: 1.75rem; display: flex; align-items: flex-start; gap: 1.25rem; text-decoration: none; color: inherit; transition: transform .2s, box-shadow .2s; position: relative; border: 2px solid transparent; }
+    a.home-card:hover { transform: translateY(-3px); box-shadow: 0 8px 28px rgba(79,70,229,.15); border-color: #4f46e5; }
+
+    .home-card-disabled { opacity: .55; cursor: not-allowed; }
+
+    .home-card-icon { font-size: 2rem; flex-shrink: 0; margin-top: .1rem; }
+    .home-card-content { flex: 1; }
+    .home-card-title { font-size: 1rem; font-weight: 700; color: #111827; margin: 0 0 .4rem; }
+    .home-card-desc { font-size: .875rem; color: #6b7280; margin: 0; line-height: 1.5; }
+
+    .home-card-arrow { font-size: 1.2rem; color: #4f46e5; font-weight: 700; align-self: center; }
+    .home-card-badge { position: absolute; top: 1rem; right: 1rem; background: #e5e7eb; color: #6b7280; font-size: .7rem; font-weight:700; padding: .2rem .6rem; border-radius: 20px; text-transform: uppercase; letter-spacing: .05em; }
+
+    @@media (max-width: 600px) { .home-main { padding: 2rem 1rem; } .home-title { font-size: 1.4rem; } }
+</style>
