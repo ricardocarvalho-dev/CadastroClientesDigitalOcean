@@ -6,7 +6,7 @@ services:
       context: .
       dockerfile: Dockerfile
     container_name: cadastro-api
-    command: ["dotnet", "api/CadastroClientes.Api.dll"]
+    command: ["api/CadastroClientes.Api.dll"]
     ports:
       - "5000:8080"
     environment:
@@ -34,7 +34,7 @@ services:
       context: .
       dockerfile: Dockerfile
     container_name: cadastro-web
-    command: ["dotnet", "web/CadastroClientes.Web.dll", "--urls", "http://+:8081"]
+    command: ["web/CadastroClientes.Web.dll", "--urls", "http://+:8081"]
     ports:
       - "5001:8081"
     environment:
